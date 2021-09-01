@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/sol.jpg">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>APP Clima y Alarma</title>
+</head>
+<body onload="onLoad()">
+    <div id="contenedor">
+        <div id="location" class="data"></div>
+        <div id="description" class="data"></div>
+        <div id="humidity" class="data"></div>
+        <div id="temperature" class="data"></div>
+        <div id="feels_like" class="data"></div>
+        <div id="lugar" class="data"></div>
+        <div id="fechaHora">
+            <div id="fecha"></div>
+            <div id="reloj"></div>
+        </div>
+
+            
+        <input onchange="establecerAlarma(this.value)" type="datetime-local" name="alarma">
+        <div class="controles">
+            <button onclick="guardarAlarma()" class="boton guardar-alarma">Crear alarma</button>
+            <button onclick="borrarAlarma()" class="boton detener-alarma">Borrar alarma</button>
+        </div>
+    </div>
+
+    <div id="loader" class="loader">Loading...</div>
+    
+    <script src="js/clima.js"></script>
+    <script src="js/index.js"></script>    
+</body>
+</html>
